@@ -34,7 +34,7 @@ shinyUI(navbarPage(
                will be published in a short practice note. The data I will be using involves
                a collection of household surveys and GDP projections from the World Bank and 
                the International Monetary Fund's Economic Outlook, which will be utilized to
-               analyze forecast the impact of COVID-19 on poverty levels in the
+               forecast the impact of COVID-19 on poverty levels in the
                Sub-Saharan Africa region. For reference, last year's practice note
                from the World Bank for Sub-Saharan Africa can be found",
                a("here.", href = "https://elibrary.worldbank.org/doi/abs/10.1596/33765")),
