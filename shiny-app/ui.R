@@ -31,7 +31,11 @@ shinyUI(navbarPage(
              p("My project is with the World Bank's Global Poverty and Equity Practice.
                I will be working with their Sub-Saharan Africa team to update the
                Bank's country-level poverty projections for 2020. The analysis
-               will be published in a short practice note. Last year's practice note
+               will be published in a short practice note. The data I will be using involves
+               a collection of household surveys and GDP projections from the World Bank and 
+               the International Monetary Fund's Economic Outlook, which will be utilized to
+               analyze forecast the impact of COVID-19 on poverty levels in the
+               Sub-Saharan Africa region. Last year's practice note
                from the World Bank for Sub-Saharan Africa can be found",
                a("here.", href = "https://elibrary.worldbank.org/doi/abs/10.1596/33765")),
                ),
