@@ -9,6 +9,8 @@
 
 library(shiny)
 library(shinythemes)
+library(tidyverse)
+library(janitor)
 
 # Define UI for application that draws a histogram
 # We changed page below from fluidPage to navbarPage
@@ -20,17 +22,25 @@ shinyUI(navbarPage(
   theme = shinytheme("slate"),
 
 # Sets title of website (by default on the top left)  
-"Dark Web Activties",
+"2020 Poverty Projections for Sub-Saharan Africa",
 
     # Application title
     # We changed from titlePanel to tabPanel
-    tabPanel("About", a("link", href = "https://www.w3schools.com/TAGS/default.ASP"),
-             p("Hello world"),
-             h1("Don't relect the Orange")
-             ),
+    tabPanel("About",
+             a("Link to my Github Repo", href = "https://github.com/sophie-z-li/dark-web-activities"),
+             p("My project is with the World Bank's Global Poverty and Equity Practice.
+               I will be working with their Sub-Saharan Africa team to update the
+               Bank's country-level poverty projections for 2020. The analysis
+               will be published in a short practice note. Last year's practice note
+               from the World Bank for Sub-Saharan Africa can be found here"),
+               ),
     tabPanel(
-      "Plot",
-      plotOutput("carPlot")
+      "Data",
+      plotOutput("carPlot"),
+      p(),
+      p("I just had a meeting with the World Bank's SSA team, and they will be sending over
+        data next week."),
+      p("Wyatt told me to do a placeholder with the mtcars dataset for now lol."),
     )
 
 ))

@@ -6,16 +6,19 @@
 #
 #    http://shiny.rstudio.com/
 #
+# Load libraries in ui.R, not server.R
 
-library(shiny)
-library(tidyverse)
+x <- mtcars
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
   # carPlot is a made-up name
     output$carPlot <- renderPlot({
-        ggplot(mtcars, aes(x = mpg, y = disp)) +
+      
+      # Just read in data!!!!
+      
+        ggplot(x, aes(x = mpg, y = disp)) +
         geom_line()
     })
 
