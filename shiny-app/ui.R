@@ -32,7 +32,7 @@ shinyUI(navbarPage(
                I will be working with their Sub-Saharan Africa team to update the
                Bank's country-level poverty projections for 2020. The analysis
                will be published in a short practice note. Last year's practice note
-               from the World Bank for Sub-Saharan Africa can be found here"),
+               from the World Bank for Sub-Saharan Africa can be found"),
                ),
     tabPanel(
       "Data",
