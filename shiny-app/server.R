@@ -8,18 +8,25 @@
 #
 # Load libraries in ui.R, not server.R
 
-x <- mtcars
+milestone <- read_excel("data/poverty_rate_SSA_new.xlsx", 4)
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
   # carPlot is a made-up name
-    output$carPlot <- renderPlot({
+    output$angolaPlot <- renderPlot({
       
       # Just read in data!!!!
-      
-        ggplot(x, aes(x = mpg, y = disp)) +
-        geom_line()
+        
+        ggplot(milestone, aes(x = year, y = povrate)) +
+        geom_line(color = "green") +
+        facet_wrap(~type) +
+        scale_x_continuous(breaks = 2019:2021,
+                           labels = c("2019", "2020", "2021")) +
+        theme_dark() +
+        labs(title = "Poverty Projections for the Country of Angola",
+             x = "Year",
+             y = "Poverty Rate")
     })
 
 })
